@@ -64,6 +64,16 @@ public class SortingUtil{
         return arr;
     }
 
+    public static int findMed(int[] arr)
+    {
+        int i = arr.length/2;
+        int M = arr[i];
+        return M;
+    }
+
+
+
+
 
 
 }
