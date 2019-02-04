@@ -5,42 +5,37 @@ public class Team7SortCompetition {
         public int challengeOne(int[] arr) {
             int length = arr.length;
 
-            for (int gap = length/2; gap > 0; gap/= 2) {
-                for (int i = gap; i < length; i++) {
-                    int temp = arr[i];
-
-                    for (int j = i; j >= gap && arr[j - gap] > temp; j-= gap) {
-                        arr[j] = arr[j - gap];
-                        arr[j] = temp;
+            for (int index = 0; index < arr.length ; index ++)
+            {
+                for (int j = index; j > 0; j-- )
+                {
+                    if (arr[j]<arr[j-1])
+                    {
+                        swap2(arr, j,j-1);
                     }
                 }
             }
 
-            //find median value and return it
+
+            int median = arr[length/2];
+            return median;
         }
 
         @Override
-        public int challengeTwo(String[] arr, String query) {
-            int swapNum = -1;
-            while (swapNum != 0)
+        public int challengeTwo(String[] arr) {
+
             {
-                swapNum = 0;
-                for (int i = 0; i < arr.length - 1; i++)
-                {
-                    int j = i + 1;
-                    if (arr[i].compareToIgnoreCase(arr[j]) > 0)
-                    {
-                        Swap(arr, i , j);
-                        swapNum++;
+                int len = arr.length;
+
+                while (isUnsorted(arr)) {
+                    for (int i = 0; i < len - 1; i++) {
+                        if ((arr[i].compareTo(arr[i + 1])) > 0) {
+                            swap(arr, i, i + 1);
+                        }
+
                     }
                 }
             }
-            for(int a = 0; a < arr.length; a++){
-                if(arr[a].indexOf(query)>-1){
-                    return a;
-                }
-            }
-            return -1;
         }
 
         @Override
@@ -134,9 +129,15 @@ public class Team7SortCompetition {
 
             return arr;
         }
-        public static void Swap(String[] array, int x, int y)
+        public static void swap(String[] array, int x, int y)
         {
             String temp = array[x];
+            array[x] = array[y];
+            array[y] = temp;
+        }
+        public static void swap2(int[] array, int x, int y)
+        {
+            int temp = array[x];
             array[x] = array[y];
             array[y] = temp;
         }
@@ -144,5 +145,19 @@ public class Team7SortCompetition {
             //prints array
         }
     }
+
+    public static boolean isUnsorted(String[] arr)
+    {
+        int len = arr.length - 1;
+        for (int pos = 0; pos < len; pos++)
+        {
+            if ((arr[pos].compareTo(arr[pos+1]))> 0)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }

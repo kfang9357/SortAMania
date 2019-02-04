@@ -71,6 +71,19 @@ public class SortingUtil{
         return M;
     }
 
+    public static boolean isUnsorted(String[] arr)
+    {
+        int len = arr.length - 1;
+        for (int pos = 0; pos < len; pos++)
+        {
+            if ((arr[pos].compareTo(arr[pos+1]))> 0)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 
 
