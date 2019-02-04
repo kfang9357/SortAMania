@@ -1,5 +1,4 @@
-public class Team7SortCompetition {
-    public class Team8SortCompetition extends SortCompetition {
+public class Team7SortCompetition extends SortCompetition {
 
         @Override
         public int challengeOne(int[] arr) {
