@@ -17,6 +17,13 @@ public class Sorts extends SortingUtilities
         }
     }
 
+    public static void bubbleSortObject(Comparable[] objectArr)
+    {
+        int len = objectArr.length;
+
+        while(is)
+    }
+
     public static void selectionSort(int[]arr) {
         for(int index = 0; index < arr.length; index++)
             minimumIndex(arr, index);
