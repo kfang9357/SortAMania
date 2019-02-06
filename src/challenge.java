@@ -1,4 +1,4 @@
-public class challenge extends SortCompetition {
+public class challenge extends Team7SortCompetition {
 
 
     public int challengeOne(int[] arr){
