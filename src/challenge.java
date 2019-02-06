@@ -26,14 +26,11 @@ public class challenge extends SortCompetition {
          Task: Sort each sub-array and then sort the arrays by their median value
          Return the median of the median array **/
 
-         }
+    }
     public int challengeFive(Comparable[] arr, Comparable query){
         /** Data Set - an array of 10,000 objects that implement the comparable interface
          Task: Sort the array by the compareTo method, and determine if it contains the element given. Return the position of the object, or -1 if not found.
          Hint: You must use a stable sort for this challenge, equivalent objects should stay in the same order. **/
-         }
-    public String greeting(){
-        return "x";
 
     }
 }

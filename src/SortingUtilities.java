@@ -43,6 +43,13 @@ public class SortingUtilities
         arr[j] = temp;
     }
 
+    public static void swap3 (Comparable[] objectArr, int i, int j)
+    {
+        Comparable temp = objectArr[i];
+        objectArr[i] = objectArr[j];
+        objectArr[j] = temp;
+    }
+
     public static int median (int[] arr)
     {
         return arr[arr.length/2];
@@ -54,6 +61,19 @@ public class SortingUtilities
         for (int pos = 0; pos < len; pos++)
         {
             if ((arr[pos].compareTo(arr[pos+1]))> 0)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean isUnsorted2(Comparable[] objectArr)
+    {
+        int len = objectArr.length - 1;
+        for(int pos = 0; pos < len; pos++)
+        {
+            if((objectArr[pos].compareTo(objectArr[pos+1]))> 0)
             {
                 return true;
             }
