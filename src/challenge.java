@@ -12,6 +12,17 @@ public class challenge extends SortCompetition {
        /** Data Set - an array of 10,000 random strings (strings will be of length 5)
         Task: Sort the list and determine if it contains a given string, return the index of the first instance of that string, or -1 if not found **/
        Sorts.bubbleSort(arr);
+       int i = 0;
+       int index = -1;
+       while (i< arr.length)
+       {
+           if (arr[i].equals(query))
+           {
+               index = i;
+           }
+       }
+
+       return index;
    }
 
     public int challengeThree(int[] arr){
@@ -25,6 +36,7 @@ public class challenge extends SortCompetition {
         /** Data Set - a multi-dimensional array int[1000][1000] all elements are random integers between 0-10000
          Task: Sort each sub-array and then sort the arrays by their median value
          Return the median of the median array **/
+
 
          }
     public int challengeFive(Comparable[] arr, Comparable query){
