@@ -43,6 +43,11 @@ public class SortingUtilities
         arr[j] = temp;
     }
 
+    public static int median (int[] arr)
+    {
+        return arr[arr.length/2];
+    }
+
     public static boolean isUnsorted(String[] arr)
     {
         int len = arr.length - 1;

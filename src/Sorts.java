@@ -17,19 +17,19 @@ public class Sorts extends SortingUtilities
         }
     }
 
-    public static void selectionSort(double[]arr) {
+    public static void selectionSort(int[]arr) {
         for(int index = 0; index < arr.length; index++)
             minimumIndex(arr, index);
     }
 
-    public static int minimumIndex(double arr[], int ind)
+    public static int minimumIndex(int arr[], int ind)
     {
         int minInd = ind;
         for (int i = ind + 1; i <arr.length; i++)
         {
             if (arr[i] < arr[minInd])
             {
-                swap3(arr,i,minInd);
+                swap(arr,i,minInd);
             }
         }
         return minInd;
