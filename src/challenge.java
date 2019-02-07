@@ -40,10 +40,11 @@ public class challenge extends Team7SortCompetition {
             }
 
     }
-    public int challengeFive(Comparable[] arr, Comparable query){
+    /**public int challengeFive(Comparable[] arr){
         /** Data Set - an array of 10,000 objects that implement the comparable interface
          Task: Sort the array by the compareTo method, and determine if it contains the element given. Return the position of the object, or -1 if not found.
          Hint: You must use a stable sort for this challenge, equivalent objects should stay in the same order. **/
+
 
     }
 }

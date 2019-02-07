@@ -19,4 +19,13 @@ public class Runner {
         printArr(randIntArr);
 
     }
+
+    public static void printArr(int[]arr){
+        for (int i:arr)
+            System.out.print(i+" ");
+    }
+    public static void printArr(String[]arr){
+        for (String i:arr)
+            System.out.print(i+" ");
+    }
 }
