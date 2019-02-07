@@ -1,4 +1,5 @@
 public class Runner {
+
     public static void Runner(String[] args)
     {
         Team7SortCompetition team7 = new Team7SortCompetition();
