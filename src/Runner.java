@@ -2,8 +2,8 @@ public class Runner {
     public static void Runner(String[] args)
     {
         Team7SortCompetition team7 = new Team7SortCompetition();
-        int[] randIntArr = randomIntsArr(10000);
-        String[] randStringArr = randomStringArr(10000, 5);
+        int[] randIntArr = SortingUtilities.randomIntsArr(10000);
+        String[] randStringArr = SortingUtilities.randomStringArr(10000, 5);
 
         System.out.println("Unsorted");
         printArr(randIntArr);
@@ -19,6 +19,7 @@ public class Runner {
         printArr(randIntArr);
 
     }
+
 
     public static void printArr(int[]arr){
         for (int i:arr)
