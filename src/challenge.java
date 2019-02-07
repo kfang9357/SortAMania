@@ -29,23 +29,46 @@ public class challenge extends Team7SortCompetition {
         return SortingUtilities.median(arr);
          }
 
-    public int challengeFour(int[][] arr){
+    public int challengeFour(int[][] arr) {
         /** Data Set - a multi-dimensional array int[1000][1000] all elements are random integers between 0-10000
          Task: Sort each sub-array and then sort the arrays by their median value
          Return the median of the median array **/
-        for(int rows=0;rows<arr.length;rows++){
-            for(int columns=0;columns <arr[rows].length;columns++){
-                Sorts.insertionSort(arr[rows]);
-                SortingUtilities.median(arr[rows]);
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                for (int k = 0; k < arr[i].length - j; k++) {
+                    if (arr[i][k] > arr[i][k + 1]) {
+                        int t = arr[i][k];
+                        arr[i][k] = arr[i][k + 1];
+                        arr[i][k + 1] = t;
+                    }
+                }
             }
 
+        }
+
+        for (int i = 0; i< arr.length-1; i++)
+            for (int j = 0; j < arr[i].length; j++) {
+                {
+                    if (SortingUtilities.median(arr[j]) > SortingUtilities.median(arr[j + 1])) {
+                        for (int k =0; k<arr[i].length; k++)
+                        {
+                            int temp = arr[i][k];
+                            arr[i][k] = arr[i+1][k];
+                            arr[i+1][k] = temp;
+                        }
+                    }
+                }
+            }
+
+        SortingUtilities.median(arr[col/2]);
+
     }
+
+
     /**public int challengeFive(Comparable[] arr){
         /** Data Set - an array of 10,000 objects that implement the comparable interface
          Task: Sort the array by the compareTo method, and determine if it contains the element given. Return the position of the object, or -1 if not found.
          Hint: You must use a stable sort for this challenge, equivalent objects should stay in the same order. **/
 
-
-    }
 }
 
