@@ -52,15 +52,15 @@ public class challenge extends Team7SortCompetition {
                     if (SortingUtilities.median(arr[j]) > SortingUtilities.median(arr[j + 1])) {
                         for (int k =0; k<arr[i].length; k++)
                         {
-                            int temp = arr[i][k];
-                            arr[i][k] = arr[i+1][k];
-                            arr[i+1][k] = temp;
+                            int[] temp = arr[i];
+                            arr[i] = arr[i+1];
+                            arr[i+1] = temp;
                         }
                     }
                 }
             }
 
-        SortingUtilities.median(arr[col/2]);
+        //SortingUtilities.median(arr[col/2]);
 
     }
 
