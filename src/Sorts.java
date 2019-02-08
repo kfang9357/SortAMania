@@ -17,12 +17,21 @@ public class Sorts extends SortingUtilities
         }
     }
 
-    /*public static void bubbleSortObject(Comparable[] objectArr)
+    public static void bubbleSortObject(Comparable[] objectArr)
     {
         int len = objectArr.length;
 
-        while(is)
-    }*/
+        while(isUnsorted2(objectArr))
+        {
+            for (int i = 0; i < len - 1; i++)
+            {
+                if (objectArr[i].compareTo(objectArr[i+1]) > 0)
+                {
+                    swap3(objectArr, i, i+1);
+                }
+            }
+        }
+    }
 
     public static void selectionSort(int[]arr) {
         for(int index = 0; index < arr.length; index++)
