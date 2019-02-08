@@ -21,7 +21,6 @@ public class Runner {
 
     }
 
-
     public static void printArr(int[]arr){
         for (int i:arr)
             System.out.print(i+" ");

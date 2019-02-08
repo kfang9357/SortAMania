@@ -1,6 +1,6 @@
 public class SortingUtilities
 {
-    public int[] randomIntsArr(int count)
+    public static int[] randomIntsArr(int count)
     {
         int[]arr = new int[count];
         for (int i = 0; i < count; i++)
@@ -11,7 +11,7 @@ public class SortingUtilities
         return arr;
     }
 
-    public String[] randomStringArr(int num, int length)
+    public static String[] randomStringArr(int num, int length)
     {
         String[] arr = new String [num];
         while (num > 0)
