@@ -1,6 +1,6 @@
 public class Runner {
 
-    public static void Runner(String[] args)
+    public static void main(String[] args)
     {
         Team7SortCompetition team7 = new Team7SortCompetition();
         int[] randIntArr = SortingUtilities.randomIntsArr(10000);
