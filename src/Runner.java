@@ -19,14 +19,20 @@ public class Runner {
         System.out.println("Sorted");
         printArr(randIntArr);
 
+        team7.challengeTwo(randStringArr, "Helloo");
+        printArr(randStringArr);
+
     }
 
     public static void printArr(int[]arr){
-        for (int i:arr)
-            System.out.print(i+" ");
+        for (int i = 0; i<arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
     public static void printArr(String[]arr){
-        for (String i:arr)
-            System.out.print(i+" ");
+        for (int i = 0; i<arr.length; i++)
+        {
+            System.out.print(arr[i] + " ");
+        }
     }
 }
