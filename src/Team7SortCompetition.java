@@ -1,5 +1,3 @@
-import javax.naming.ldap.SortControl;
-
 public class Team7SortCompetition extends SortCompetition {
 
     public String greeting()
