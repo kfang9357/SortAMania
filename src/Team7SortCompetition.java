@@ -50,20 +50,22 @@ public class Team7SortCompetition extends SortCompetition {
                 }
             }
         }
-        for (int i = 0; i< arr.length-1; i++){
-           {
+        for (int i = 0; i < arr.length - 1; i++) {
+            {
                 {
                     if (SortingUtilities.median(arr[i]) > SortingUtilities.median(arr[i + 1])) {
                         {
                             int[] temp = arr[i];
-                            arr[i] = arr[i+1];
-                            arr[i+1] = temp;
+                            arr[i] = arr[i + 1];
+                            arr[i + 1] = temp;
                         }
                     }
                 }
             }
-            return SortingUtilities.median(arr[(i+1)/2]);
+        }
+        return SortingUtilities.median(arr[(i + 1) / 2]);
     }
+
 
     public int challengeFive(Comparable[] arr, Comparable query)
     {
