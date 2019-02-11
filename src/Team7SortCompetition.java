@@ -2,7 +2,10 @@ import javax.naming.ldap.SortControl;
 
 public class Team7SortCompetition extends SortCompetition {
 
-
+    public String greeting()
+    {
+        return "Hello";
+    }
     public int challengeOne(int[] arr){
         /** Data Set - an array of 10,000 random integers between 0-10000
          Task: Sort the list and return the median **/
@@ -10,7 +13,8 @@ public class Team7SortCompetition extends SortCompetition {
         return SortingUtilities.median(arr);
     }
 
-   public int challengeTwo(String[] arr, String query) {
+   public int challengeTwo(String[] arr, String query)
+   {
        /** Data Set - an array of 10,000 random strings (strings will be of length 5)
         Task: Sort the list and determine if it contains a given string, return the index of the first instance of that string, or -1 if not found **/
        Sorts.bubbleSort(arr); // use compare to
@@ -61,7 +65,11 @@ public class Team7SortCompetition extends SortCompetition {
             return SortingUtilities.median(arr[(i+1)/2]);
     }
 
-
+    public int challengeFive(Comparable[] arr, Comparable query)
+    {
+        Sorts.bubbleSortObject(arr);
+        return 0;
+    }
     /**public int challengeFive(Comparable[] arr){
         /** Data Set - an array of 10,000 objects that implement the comparable interface
          Task: Sort the array by the compareTo method, and determine if it contains the element given. Return the position of the object, or -1 if not found.
