@@ -63,7 +63,7 @@ public class Team7SortCompetition extends SortCompetition {
                 }
             }
         }
-        return SortingUtilities.median(arr[(i + 1) / 2]);
+        return SortingUtilities.median(arr[500]);
     }
 
 
