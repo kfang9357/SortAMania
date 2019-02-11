@@ -45,14 +45,11 @@ public class Team7SortCompetition extends SortCompetition {
                     }
                 }
             }
-
         }
-
-        for (int i = 0; i< arr.length-1; i++)
-            for (int j = 0; j < arr[i].length; j++) {
+        for (int i = 0; i< arr.length-1; i++){
+           {
                 {
-                    if (SortingUtilities.median(arr[j]) > SortingUtilities.median(arr[j + 1])) {
-                        for (int k =0; k<arr[i].length; k++)
+                    if (SortingUtilities.median(arr[i]) > SortingUtilities.median(arr[i + 1])) {
                         {
                             int[] temp = arr[i];
                             arr[i] = arr[i+1];
@@ -61,9 +58,7 @@ public class Team7SortCompetition extends SortCompetition {
                     }
                 }
             }
-
-        //SortingUtilities.median(arr[col/2]);
-
+            return SortingUtilities.median(arr[(i+1)/2]);
     }
 
 
